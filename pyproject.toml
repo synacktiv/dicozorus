@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dicozorus"
+version = "1.0.0"
+description = "Dicozorus is a tool to maintain wordlists for web fuzzing"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    # Add any PyPI packages your project imports here (e.g., "requests")
+]
+
+[project.scripts]
+dicozorus = "dicozorus.dicozorus:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"dicozorus.wordlists" = ["*.wordlist"]

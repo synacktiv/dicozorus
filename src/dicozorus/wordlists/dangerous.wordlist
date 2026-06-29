@@ -1,0 +1,12 @@
+## path, criticality, count, category, tags, reference
+"actuator/;/shutdown","UNRANKED","1","","DIRSEARCH",""
+"actuator/shutdown","UNRANKED","1","","DIRSEARCH",""
+"actuators/shutdown","UNRANKED","1","","DIRSEARCH",""
+"admin/shutdown_reboot.php","UNRANKED","3","","EXPLOITDB",""
+"management/shutdown","UNRANKED","1","","DIRSEARCH","https://docs.spring.io/spring-boot/reference/actuator/endpoints.html"
+"shutdown","UNRANKED","1","","Bo0oM",""
+"~shutdown","UNRANKED","1","","DIRSEARCH",""
+"~shutdown/","UNRANKED","1","","HACKERONE",""
+"reboot","INFO","4","","REPORTS",""
+"userRpm/PingIframeRpm.htm","UNRANKED","1","DOS","EXPLOITDB","https://www.exploit-db.com/exploits/51866"
+"localmenus.cgi","UNRANKED","1","DOS","CGI","https://nvd.nist.gov/vuln/detail/CVE-2020-16139"
