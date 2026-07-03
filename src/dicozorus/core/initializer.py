@@ -4,6 +4,7 @@ from dicozorus.model.wordlist import DicozorusWordlist
 from dicozorus.parser.dicozorus import DicozorusParser
 from os import path, makedirs, getenv
 
+import importlib.resources
 import glob
 import os
 import sys
@@ -18,10 +19,7 @@ class DicozorusInitializer:
         self.initialize_empty=args.empty
         self.initialize_minimal=args.initialize_minimal
         self.initialize_dangerous=args.dangerous
-        if args.wordlists_folder:
-            self.wordlists_folder = args.wordlists_folder
-        else:
-            self.wordlists_folder = '{}/.dicozorus/wordlists'.format(getenv('HOME'))
+        self.wordlists_folder = args.wordlists_folder
 
     def init(self):
         """
@@ -63,22 +61,23 @@ class DicozorusInitializer:
         dicozorus_wordlist = DicozorusWordlist()
         dicozorus_parser = DicozorusParser(dicozorus_wordlist,
                                          ignore_comments='##')
-        #wordlists_files = glob.glob(self.wordlists_folder + '/*.wordlist')
-        import importlib.resources
-        pkg_builtin_wordlists = importlib.resources.files("dicozorus.wordlists")
-        
-        #if len(wordlists_files) == 0:
-        #    logger.error(('The wordlist directory for database initialization '
-        #        'is empty ! ({})'.format(self.wordlist_folder)))
-        #    sys.exit(-1)
-        #for wordlist_filepath in wordlists_files:
-        wordlists = [ 
-            item for item in pkg_builtin_wordlists.iterdir() 
-            if item.name.endswith(".wordlist")
-        ]
+
+        if self.wordlists_folder:
+            wordlists = glob.glob(self.wordlists_folder + '/*.wordlist')
+            if len(wordlists) == 0:
+                logger.error(('The wordlist directory for database initialization '
+                    'is empty ! ({})'.format(self.wordlists_folder)))
+                sys.exit(-1)
+        else:
+            pkg_builtin_wordlists = importlib.resources.files("dicozorus.wordlists")
+            wordlists = [
+                item for item in pkg_builtin_wordlists.iterdir()
+                if item.name.endswith(".wordlist")
+            ]
+
         if len(wordlists) == 0:
             logger.error(('The wordlist directory for database initialization '
-                'is empty ! ({})'.format(self.wordlist_folder)))
+                'is empty ! ({})'.format(self.wordlists_folder)))
             sys.exit(-1)
 
         for wordlist_filepath in wordlists:
