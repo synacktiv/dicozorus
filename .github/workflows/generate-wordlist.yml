@@ -1,0 +1,40 @@
+name: Generate lazy.txt Wordlist
+
+on:
+  push:
+    branches:
+      - main
+    # Ignore commits that only change lazy.txt to prevent infinite CI loops
+    paths-ignore:
+      - 'lazy.txt'
+
+jobs:
+  generate-wordlist:
+    runs-on: ubuntu-latest
+
+    # Required to allow GitHub Actions to commit and push back to main
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dicozorus via pipx
+        run: pipx install .
+
+      - name: Initialize database and generate lazy.txt
+        run: |
+          dicozorus init
+          dicozorus gen -o lazy.txt
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-update lazy.txt"
+          file_pattern: lazy.txt
