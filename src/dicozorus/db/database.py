@@ -130,7 +130,7 @@ class DicozorusDatabase:
         self.db.commit()
 
     def get_entries(self, max_entries=None, filters=None,
-            order_by='criticality,count'):
+            order_by='criticality DESC, count DESC, name ASC'):
         """
         Retrieve entries from the database. Entries will be sorted by
         criticality and count by default.
@@ -142,8 +142,7 @@ class DicozorusDatabase:
         limit = 'LIMIT {}'.format(max_entries) if max_entries else ''
         where = 'WHERE {}'.format(' AND '.join(
             '(' + f + ')' for f in filters)) if filters else ''
-        order = 'ORDER BY {}'.format(' DESC, '.join(order_by.split(','))
-                + ' DESC')
+        order = 'ORDER BY {}'.format(order_by)
 
         sql_query = ('SELECT * FROM dicozorus_entries {} {} {}').format(where, order, limit)
         logger.debug('Executing query: %s', sql_query)

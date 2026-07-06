@@ -61,10 +61,11 @@ def get_dicozorus_parser():
             help='Save the generated wordlist to the specified file')
     parser_gen.add_argument('-m', '--max-entries',
             help='Maximum number of entries to generate')
-    parser_gen.add_argument('-s', '--sort', default= "criticality,count",
+    parser_gen.add_argument('-s', '--sort',
+            default="criticality DESC, count DESC, name ASC",
             help=('Specify the criteria to use to sort entries. Comma '
             'separated list of values in (criticality, count, name, type). '
-            'Default is criticality,count'))
+            'Default is "criticality DESC, count DESC, name ASC"'))
     parser_gen.add_argument('-S', '--shuffle', action='store_true',
             help='Print a randomly shuffled version of the selected entries')
     parser_gen.add_argument('-D', dest='filter_dir', action='store_true',

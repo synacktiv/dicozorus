@@ -155,7 +155,7 @@ class DicozorusWordlist:
                 print(entry.name)
 
     def load(self, max_entries=None, sql_filters=None, regex_filter=None,
-            tag_filter=None, order_by='criticality,count'):
+            tag_filter=None, order_by='criticality DESC, count DESC'):
         """
         Load *max_entries* from the database. Only retrieve entries matching
         the sql_filter from the database (filter-in). Selected entries can be
