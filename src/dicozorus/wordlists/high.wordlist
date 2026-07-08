@@ -692,7 +692,7 @@
 "misc.php","HIGH","1","AUTH_BYPASS","PHP","https://nvd.nist.gov/vuln/detail/CVE-2021-26598"
 "include/findusers.php","HIGH","1","AUTH_BYPASS","PHP","https://nvd.nist.gov/vuln/detail/CVE-2021-26598"
 "importer","HIGH","1","AUTH_BYPASS","PHP","https://nvd.nist.gov/vuln/detail/CVE-2026-42569"
-"mcp_message","HIGH","1","AUTH_BYPASS","https://nvd.nist.gov/vuln/detail/CVE-2026-33032"
+"mcp_message","HIGH","1","AUTH_BYPASS","","https://nvd.nist.gov/vuln/detail/CVE-2026-33032"
 "NmConsole/WugSystemAppSettings/JMXSecurity","HIGH","1","AUTH_BYPASS","JAVA","https://www.zerodayinitiative.com/advisories/ZDI-24-1186/"
 "options/set","HIGH","1","AUTH_BYPASS","","https://nvd.nist.gov/vuln/detail/CVE-2026-41176"
 "passwordrecovered.cgi","HIGH","1","AUTH_BYPASS","","https://www.cvedetails.com/cve/CVE-2017-5521/"
