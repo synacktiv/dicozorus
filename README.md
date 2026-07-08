@@ -17,6 +17,14 @@ Dicozorus solves these issues by associating entries with enriched metadata. Thi
 * **Adaptive Sizing:** Easily scale your wordlist size depending on target stability, rate limits, or network connectivity.
 * **Contextual Fuzzing:** Generate lists specifically tuned for directory fuzzing, file fuzzing, or both.
 
+
+## Installation
+```bash
+$ pipx install git+https://github.com/synacktiv/dicozorus/
+```
+## Dicozorus overview
+<img width="800" alt="dicozorus_overview" src="https://github.com/user-attachments/assets/94dab30b-2db7-4077-8e66-7c0b9d6d33c2" />
+
 ## Architecture & Data Storage
 
 Dicozorus stores data locally in an SQLite database located at `$HOME/.dicozorus/db.sqlite`. Each entry tracks the following attributes:
@@ -31,12 +39,34 @@ Dicozorus stores data locally in an SQLite database located at `$HOME/.dicozorus
 | **tag** | Contextual tags for technology filtering (e.g., `PHP`, `JAVA`, `LINUX`). |
 | **reference**| An optional link to an associated vulnerability, advisory, or known endpoint documentation. |
 
-## Installation
-```bash
-$ pipx install git+https://github.com/synacktiv/dicozorus/
-```
-## Dicozorus overview
-<img width="800" alt="dicozorus_overview" src="https://github.com/user-attachments/assets/94dab30b-2db7-4077-8e66-7c0b9d6d33c2" />
+
+## Dicozorus built-in wordlists
+
+For more convenience, dicozorus is packed with built-in wordlists. The entries present in these wordlists comes from various locations:
+- Others wordlists or projects (`dirsearch`, `bo0om`, `Seclist`, `nuclei`. etc.)
+- Public vulnerability reports (HackerOne reports, ExploitDB vulnerabilities, Github Advisories)
+- Redteam / Pentests feedbacks
+
+<img  width="800" alt="dicozorus_sources" src="https://github.com/user-attachments/assets/18195eb2-be3b-4bf5-a74b-023712aeff2e" />
+
+### Current set of built-in wordlists
+| Name | Description |
+| :--- | :--- |
+|critical.wordlist  | CRITICAL entries only|
+|high.wordlist      | HIGH entries only|
+|medium.wordlist    | MEDIUM entries only|
+|low.wordlist       | LOW entries only|
+|info.wordlist      | INFO entries only|
+|unranked.wordlist  | Entries with no affected criticality|
+|bo0om.wordlist     | Entries from BoOoM wordlist with no affected criticality|
+|dirsearch.wordlist | Entries from dirsearch wordlist with no affected criticality|
+|exploitdb.wordlist | Entries from exploitDB with no affected criticality|
+|hackerone.wordlist | Entries from HackerOne public reports with no affected criticality|
+|seen.wordlist      | Entries that were seen here and there, with no affected criticality|
+|dangerous.wordlist | Dangerous entries such as `/shutdown` or `reboot`|
+
+### lazy.txt
+Each time a change is made to the built-in wordlists, [lazy.txt](./lazy.txt) is generated. It includes all built-in entries except dangerous ones, sorted by criticality and count.
 
 
 ## Usage
@@ -95,6 +125,12 @@ jolokia
 bitrix/admin/php_command_line.php
 jenkins/script
 ```
+### Check the metadata associated with a specific entry
+```bash
+$ dicozorus check -e '_fragment'
+_fragment [type: FILE, criticality: CRITICAL, count: 2, category: RCE, taglist: ['PHP', 'Bo0oM'], reference: https://www.ambionics.io/blog/symfony-secret-fragment]
+```
+
 ### Show stats about the dicozorus database
 ```bash
 $ dicozorus stats
@@ -117,36 +153,6 @@ $ dicozorus stats
 	INFO_LEAK: 280
 [...]
 ```
-
-
-### Dicozorus built-in wordlists
-
-For more convenience, dicozorus is packed with built-in wordlists. The entries present in these wordlists comes from various locations:
-- Others wordlists or projects (`dirsearch`, `bo0om`, `Seclist`, `nuclei`. etc.)
-- Public vulnerability reports (HackerOne reports, ExploitDB vulnerabilities, Github Advisories)
-- Redteam / Pentests feedbacks
-
-<img  width="800" alt="dicozorus_sources" src="https://github.com/user-attachments/assets/18195eb2-be3b-4bf5-a74b-023712aeff2e" />
-
-#### Current set of built-in wordlists
-| Name | Description |
-| :--- | :--- |
-|critical.wordlist  | CRITICAL entries only|
-|high.wordlist      | HIGH entries only|
-|medium.wordlist    | MEDIUM entries only|
-|low.wordlist       | LOW entries only|
-|info.wordlist      | INFO entries only|
-|unranked.wordlist  | Entries with no affected criticality|
-|bo0om.wordlist     | Entries from BoOoM wordlist with no affected criticality|
-|dirsearch.wordlist | Entries from dirsearch wordlist with no affected criticality|
-|exploitdb.wordlist | Entries from exploitDB with no affected criticality|
-|hackerone.wordlist | Entries from HackerOne public reports with no affected criticality|
-|seen.wordlist      | Entries that were seen here and there, with no affected criticality|
-|dangerous.wordlist | Dangerous entries such as `/shutdown` or `reboot`|
-
-#### lazy.txt
-Each time a change is made to the built-in wordlists, [lazy.txt](./lazy.txt) is generated. It includes all built-in entries except dangerous ones, sorted by criticality and count.
-
 
 ## Contributing
 ### Custom CSV Format
