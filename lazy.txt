@@ -2325,6 +2325,7 @@ admin/api/index.php/health-check
 admin/api/index.php/ldap/configuration
 admin5.nsf
 agentrunner.nsf
+airflow
 ajfork/
 alfresco/
 alog.nsf
@@ -2366,6 +2367,7 @@ atlassian/
 atmail/
 atsphp/
 authorization.do
+aws_mwaa/
 axis/happyaxis.jsp
 axis2-web/HappyAxis.jsp
 backdrop/
