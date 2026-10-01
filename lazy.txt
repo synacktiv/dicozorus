@@ -1992,6 +1992,7 @@ Webalizer/
 Wordpress/
 _debugbar/open
 _mm
+_profiler
 access/config
 activemq/
 actuator/auditevents
@@ -2307,6 +2308,7 @@ _pHpMyAdMiN/
 _phpMyAdmin/
 _profiler/phpinfo
 _vti_pvt/service.cnf
+_wdt
 a_domlog.nsf
 access/accounts
 achievo/
@@ -14177,7 +14179,6 @@ _priv8/
 _privado/
 _privados/
 _private/
-_profiler
 _proxy
 _secgeek
 _site/
@@ -15613,7 +15614,6 @@ blocks-edit.php
 blog&a_password=12121212
 blog.asp
 blog/fckeditor
-blog/laravel-debug-rce
 blog/phpmyadmin/
 blog_admin
 blog_detail.php
