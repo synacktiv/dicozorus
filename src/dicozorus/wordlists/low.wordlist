@@ -10,6 +10,8 @@
 ".zsh_history","LOW","1","HISTORY_FILE","",""
 ## }}}
 ## {{{ INFO_LEAK
+"_wdt","LOW","1","INFO_LEAK","PHP","https://symfony.com/doc/current/reference/configuration/web_profiler.html"
+"_profiler","LOW","1","INFO_LEAK","PHP","https://symfony.com/doc/current/profiler.html"
 "4DHTMLSTATS","LOW","1","INFO_LEAK","","https://doc.4d.com/4Dv18/4D/18.4/URLs-et-actions-de-formulaires.300-5232844.fe.html"
 "4DSTATS","LOW","1","INFO_LEAK","","https://doc.4d.com/4Dv18/4D/18.4/URLs-et-actions-de-formulaires.300-5232844.fe.html"
 "4DWEBTEST","LOW","1","INFO_LEAK","","https://doc.4d.com/4Dv18/4D/18.4/URLs-et-actions-de-formulaires.300-5232844.fe.html"
