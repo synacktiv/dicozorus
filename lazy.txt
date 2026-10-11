@@ -107,6 +107,7 @@ CFIDE/adminapi/accessmanager.cfc
 CFIDE/adminapi/base.cfc
 EemAdminService/EemAdmin
 ElkArte/index.php
+Encoder/objects/getImage.php
 FormServer/servlet/GetDocumentServlet
 NmAPI/RecurringReport
 OA_HTML/BneDownloadService
@@ -132,6 +133,7 @@ ajax/networking/get_netcfg.php
 ajax/openvpn/del_ovpncfg.php
 ajax/render/widget_tabbedcontainer_tab_panel
 ajaxPages/writeBrowseFilePathAjax.php
+api/acp/agents
 api/experimental/test
 api/getServices
 api/jobs/
@@ -145,6 +147,7 @@ api/reportserver/report
 api/runscript
 api/screenshot
 api/setup/validate
+api/smartfilters/testexecutions
 api/tools/mcp/add
 api/v1/settings/sysadmin/connect-to-hub
 api/v1/snapshots
@@ -242,6 +245,7 @@ fortisandbox/job-detail/tracer-behavior
 ftp/getresetstatus
 function/save
 functionRouter
+geoserver/wfs
 getsamplebacklog
 goanywhere/auth/Login.xhtml
 goanywhere/lic/accept
@@ -321,6 +325,7 @@ qvisdvr/index.faces
 remote_agent.php
 reports/rwservlet
 res/login.jsf
+rest/default/V1/guest-carts
 rest/executions/
 rest/id-pools/executeCommand
 runners/start
@@ -370,6 +375,7 @@ webtools/control/view/StatsSinceStart
 webui/application/get_saml_request
 wls-wsat/CoordinatorPortType
 www/delivery/afr.php
+xwiki/bin/get/Main/DatabaseSearch
 manager/html
 admin/
 names.nsf
@@ -409,6 +415,7 @@ Image_voting/index.php
 action.php
 admin.html
 analytics/saw.dll
+document.php
 download/index.php
 file
 filemgmt/viewcat.php
@@ -613,7 +620,6 @@ xx.php
 .config/gcloud/credentials.db
 .config/sftp.json
 /-/speak/v1/bundles/bundle.js
-/appGet.cgi
 ACSServer/DownloadFileServlet
 ACSServer/WebServlet
 Admin/Admin.aspx
@@ -746,17 +752,20 @@ api/authentication/login
 api/captcha
 api/client/user/pwd_update.php
 api/content/
+api/designer/v1/file-content
 api/dns
 api/ds/query
 api/dump
 api/experimental/patternfile
 api/fabric/device/status
 api/file/formimage
+api/filetree/searchDocs
 api/gen/clients/csharp
 api/get-browser-snapshot
 api/get_device_details
 api/install
 api/jmeter/download/files
+api/notebook/lsNotebooks
 api/open_file
 api/products
 api/raster/search/
@@ -764,14 +773,17 @@ api/router/mesh/status
 api/scim/v2/Users
 api/search/order
 api/settings/values
+api/soap/mantisconnect.php
 api/sys/login
 api/system/system/string_render
 api/thumbnail
 api/upload
+api/v0/devices
 api/v0/generate_sql
 api/v0/train
 api/v1/artifact/getArtifact
 api/v1/auth/force-reset-password
+api/v1/auto_login
 api/v1/components
 api/v1/confup
 api/v1/init_consts
@@ -782,8 +794,12 @@ api/v2/open/rowsInfo
 api/v2/simulation
 apis/authentication
 apisix/admin/routes
+app/rest/server
 app/settings.py
 app/tools/subnet-masks/popup.php
+appGet.cgi
+apps/zxtm/login.cgi
+apps/zxtm/wizard.fcgi
 as/wapi/vmp
 asispanel/login/cek
 assets/backend/elfinder/elfinder-cke.html
@@ -832,6 +848,7 @@ cgi/getGDPRParm
 cgi/getParm
 cgi/get_param.cgi
 cgi/login.cgi
+cgi/samlauth
 cgi­bin/webproc
 chat/imController/showOrDownByurl.do
 classes/adodb/server.php
@@ -850,6 +867,7 @@ concerto/services/RepositoryService
 config/getuser
 config/update
 console/api/system-features
+console/api/workspaces/current/plugin/icon
 console/dashboard/executorCount
 console/portal/Server/j_security_check
 contactus.php
@@ -859,10 +877,12 @@ credentials.db
 crowd/plugins/servlet/exp?cmd=cat%20/etc/passwd
 cs/career/getSurvey.jsp
 csvServer.php
+customer/address_file/upload
 customer_support/ajax.php
 dana-na/auth/saml-sso.cgi
 dashboard/uploadID.php
 dashboardUser
+data.php
 data/login
 data/pbootcms.db
 databaseFileDelete.php
@@ -871,8 +891,10 @@ db/robomongo.json
 de2api/user/info
 delete_cart_goods.php
 devices.inc.php
+directory_items.json
 django/settings.py
 dms/services/ServerUI
+dms;/services/ServerUI
 documentum/upload.aspx
 downloadDb.php
 download_file/shadow
@@ -892,6 +914,7 @@ engine/libs/spaw/dialogs/dialog.php
 eonapi/getApiKey
 events/index
 fcgi-bin/wgsetcgi
+fetch_cve_data
 fetch_products.php
 fhem/FileLog_logWrapper
 fileman/asp_net/main.ashx
@@ -1056,6 +1079,7 @@ progs/status/login
 protocol/index.php
 pt3upd/
 public/spaw2/dialogs/dialog.php
+public/static/admin/lib/webuploader/0.1.5/server/preview.php
 qcbin/debug
 qcbin/jmx-console
 quick-order
@@ -1096,10 +1120,12 @@ spaw/dialogs/dialog.php
 spaw2/dialogs/dialog.php
 spreadsheet-reader/test.php
 ssoadm.jsp
+static/admin/lib/webuploader/0.1.5/server/preview.php
 static/ueditor/php/controller.php
 status.htm
 storage/filesvr.dn
 system/download
+tap/dw.php
 task/loginValidation.php
 taskGrid/tasklist.html
 tasks/LoginTasks/login
@@ -1130,6 +1156,7 @@ v1/warehouse/pending-events
 v2/api/product/manger/getInfo
 view_caricatier.php
 view_file
+viewimage.php
 wan.htm
 web/settings/settings.py
 web/signin/open
@@ -2114,6 +2141,7 @@ mcollective/
 mercurial/
 mesos/
 metaadmin
+mifs/login.jsp
 modelsearch/
 mongo/
 mongodb/
@@ -2240,6 +2268,16 @@ zipkin/
 .infinity.json
 .m2/settings.xml
 .sencha/
+.well-known/agent-card.json
+.well-known/agent-descriptions
+.well-known/agent.json
+.well-known/ai-catalog.json
+.well-known/ai-plugin.json
+.well-known/did.json
+.well-known/oauth-protected-resource
+.well-known/oauth-protected-resource/api/mcp
+.well-known/oauth-protected-resource/mcp
+.well-known/openai-apps-challenge
 /internal/v2/config/mps_secret/ADM_SESSIONID
 /juis_boxinfo.xml
 /one/siteinfo.php
@@ -2252,6 +2290,7 @@ AdaptCMS/
 AvalancheWeb/
 AxisServlet
 BluePageCMS/
+CLAUDE.md
 CSZCMS/
 Concrete5/
 ConfigFileCacheList.txt
@@ -2270,6 +2309,7 @@ LTX_navi.html
 LibreEHR/
 LoadFrame
 NetBiblio/
+NmConsole/
 OA_HTML/ibeCAcpSSOReg.jsp
 OWA
 Owa/
@@ -2544,6 +2584,7 @@ goforms/rlminfo
 gradlew
 graffiticms/
 graph_cms
+h2-console
 hangfire/
 haproxy-status
 haproxy_stats
@@ -2667,6 +2708,7 @@ mediawiki/
 metrics/v1/mbeans
 mgmt/shared/authn/login
 mgmt/tm/sys/management-ip
+mics/login.jsp
 minio/bootstrap/v1/verify
 minio/login
 miscadmin
@@ -2682,6 +2724,7 @@ nagiosxi/
 nagiosxi/login.php
 navpage.do
 network-login/
+network/graph/layout
 nifi-api/access/config
 nmc/rpc/log_getfile
 nubuilder/
@@ -2882,6 +2925,7 @@ squirrelmail/
 squirrelmail/src/login.php
 sr/
 sslvpn/Login/Login
+ssp/login
 startup
 stats.json
 stats/summary
@@ -4707,6 +4751,7 @@ BrandsSliderAPI/
 Browser
 CHANGELOG.LOG
 CHANGES.txt
+CLAUDE.local.md
 CLICACCUEIL_WEB/FR/index.AWP
 CMSModules/Messaging/CMSPages/PublicMessageUserSelector.aspx
 CMSPages/LISA_logon.aspx
@@ -4957,6 +5002,7 @@ admin/config/content/formats/full_html
 admin/login_check
 admin/sonata/user/user/
 admin/test/
+admin/users_ajax.php
 adminActionService.aspx
 adminer.pac
 adminer.sql
@@ -5532,7 +5578,6 @@ databases
 databases.zip
 datafiles
 datas
-dataview
 dataview/
 date
 dati_tecnici.php
@@ -5565,8 +5610,10 @@ delete_file.php
 deleted
 deleteme
 deletion
+dem
 demande
 demandware.serv
+demdataview
 denied
 denombrer
 deny
@@ -5736,6 +5783,8 @@ env.prod.js
 env.production.js
 env.sh
 env.test.js
+envRuntime
+envRuntime.json
 environ
 environment
 environnement
@@ -8001,7 +8050,6 @@ dispatch.php
 dload.php
 doceboLms/class.module/track.glossary.php
 docu/goto.php
-document.php
 docushare/dsweb/ResultBackgroundJobMultiple/1
 dolibarr/
 dolibarr/user/index.php
@@ -18921,7 +18969,6 @@ mics/
 mics/mics.html
 mifs/
 mifs/c/d/android.html
-mifs/login.jsp
 mifs/user/index.html
 mifs/user/login.jsp
 migration/
