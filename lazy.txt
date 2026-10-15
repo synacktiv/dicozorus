@@ -220,6 +220,7 @@ console/css/%252e%252e%252fconsole.portal
 controller/ping.php
 convert
 cyrus.index.php
+dana-na/auth/url_default/welcome.cgi
 databases/upgrademysqlstatus
 ddns_check.ccp
 de2api/datasource/getSchema
@@ -227,6 +228,7 @@ de2api/datasource/validate
 delsnap.pl
 deployment-rpc/enableStrongSwanTunnel
 developmentserver/metadatauploader
+device.rsp
 dns/getresetstatus
 docs/api
 docs/api.json
