@@ -8,5 +8,6 @@
 "~shutdown","UNRANKED","1","","DIRSEARCH",""
 "~shutdown/","UNRANKED","1","","HACKERONE",""
 "reboot","INFO","4","","REPORTS",""
+"restart","INFO","1","","","https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2026/CVE-2026-76268.yaml"
 "userRpm/PingIframeRpm.htm","UNRANKED","1","DOS","EXPLOITDB","https://www.exploit-db.com/exploits/51866"
 "localmenus.cgi","UNRANKED","1","DOS","CGI","https://nvd.nist.gov/vuln/detail/CVE-2020-16139"

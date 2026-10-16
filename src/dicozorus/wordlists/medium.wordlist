@@ -494,6 +494,7 @@
 "zimbra/","MEDIUM","1","XSS","","https://cve.mitre.org/cgi-bin/cvename.cgi?name=2023-34192"
 ## }}}
 ## {{{ SSRF
+"api/plugins","MEDIUM","1","SSRF","GO","https://nvd.nist.gov/vuln/detail/CVE-2026-86242"
 "activities/ajax_share","MEDIUM","1","SSRF","PHP","https://nvd.nist.gov/vuln/detail/CVE-2023-43323"
 "api/notifications/test-webhook","MEDIUM","1","SSRF","GO","https://nvd.nist.gov/vuln/detail/CVE-2026-45298"
 "api/proxy","MEDIUM","1","SSRF","","https://nvd.nist.gov/vuln/detail/CVE-2026-33340"
