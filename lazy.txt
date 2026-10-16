@@ -139,6 +139,7 @@ api/getServices
 api/jobs/
 api/log/killJob
 api/management/v1/document-definition/migrate
+api/mcp/client
 api/mcp/connect
 api/ping/
 api/query
@@ -149,6 +150,7 @@ api/screenshot
 api/setup/validate
 api/smartfilters/testexecutions
 api/tools/mcp/add
+api/v1/custom_component
 api/v1/settings/sysadmin/connect-to-hub
 api/v1/snapshots
 api/v1/validate/code
@@ -219,6 +221,7 @@ connectioncheck.php
 console/css/%252e%252e%252fconsole.portal
 controller/ping.php
 convert
+cpmws/UpgradeSvcRemote
 cyrus.index.php
 dana-na/auth/url_default/welcome.cgi
 databases/upgrademysqlstatus
@@ -276,6 +279,7 @@ istrobe/userHelp/saveUserHelp
 javax.faces.resource/dynamiccontent.properties.xhtml
 jenkins/scriptText
 jira/rest/scriptrunner/latest/user/exec/
+jmx-console/.;/HtmlAdaptor
 jsonpath
 kylin/api/cubes/kylin_streaming_cube
 linuxki/experimental/vis/kivis.php
@@ -307,6 +311,7 @@ mt7/mt-xmlrpc.cgi
 mt7/mt.cgi
 nette.micro/
 network_test.php
+nf/auth/doAuthentication.do
 node_modules/angular-base64-upload/demo/server.php
 oam/server/opensso/sessionservice
 objects/getImage.php
@@ -330,6 +335,7 @@ res/login.jsf
 rest/default/V1/guest-carts
 rest/executions/
 rest/id-pools/executeCommand
+rps/api/json/UpdateReceivers.do
 runners/start
 saas./resttosaasservlet
 scan-engine/update
@@ -351,6 +357,7 @@ struts/webconsole.html
 struts2-rest-showcase/orders/3
 struts2-showcase/integration/saveGangster.action
 template/aui/text-inline.vm
+test.do
 tests/support/stores/test_grid_filter.php
 tools.cgi
 tos/index.php
@@ -387,6 +394,7 @@ admin/index.php
 download
 shell.php
 user/login
+config
 apply.cgi
 c99.txt
 c99shell.txt
@@ -538,6 +546,7 @@ cms/content/list
 commands.inc.php
 console/j_security_check
 dfsms/
+directory_items.json
 dl.asp
 domcfg.nsf/?open
 downloadFile.php
@@ -715,6 +724,7 @@ _admin/imgdownload.php
 _vti_bin/admin.asmx
 abton/spaw2/dialogs/dialog.php
 academy/tutor/filter
+access/api/v1/aws/token
 access_tokens.db
 acp/core/files.upload-script.php
 actions/entree.php
@@ -777,11 +787,13 @@ api/search/order
 api/settings/values
 api/soap/mantisconnect.php
 api/sys/login
+api/system/system/error_reporting_enabled
 api/system/system/string_render
 api/thumbnail
 api/upload
 api/v0/devices
 api/v0/generate_sql
+api/v0/telemetry/config
 api/v0/train
 api/v1/artifact/getArtifact
 api/v1/auth/force-reset-password
@@ -893,7 +905,6 @@ db/robomongo.json
 de2api/user/info
 delete_cart_goods.php
 devices.inc.php
-directory_items.json
 django/settings.py
 dms/services/ServerUI
 dms;/services/ServerUI
@@ -1033,6 +1044,7 @@ mdm/serverurl
 messagebroker/http
 messagebroker/httpsecure
 mgmnt/
+mifs/aad/api/v2/admins/users
 mims/updatecustomer.php
 model/__show_info.php
 models/apply
@@ -1061,6 +1073,7 @@ others/_test.php
 ows
 password.jsn
 patient/search_result.php
+patroni
 pbxcore/api/files/uploadFile
 pcidss/report
 photo/combine.php
@@ -1434,6 +1447,7 @@ api/get-organizations
 api/logout
 api/module
 api/notifications/test-webhook
+api/plugins
 api/remotefollow
 api/set-password
 api/templates/fetch
@@ -2834,6 +2848,7 @@ pme/database/pme/phinx.yml
 pme/media/
 pools/default/buckets
 portal/loginpage.aspx
+posts.json
 pprof/
 prestashop/
 primefaces/
@@ -2908,6 +2923,7 @@ signalr/hubs
 simple-cms/
 simple/pages/UI.php
 simplecms/
+site.json
 site_admin/user/login
 sitemagic/
 siteserver/
@@ -3088,7 +3104,6 @@ upload.html
 upload.php
 user.php
 borjpp/sso/login
-config
 demo/
 download/
 downloads
